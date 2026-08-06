@@ -1,0 +1,93 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Catalog API (5101)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-catalog",
+      "program": "${workspaceFolder}/src/Services/Catalog/MyEcomm.Catalog.Api/bin/Debug/net8.0/MyEcomm.Catalog.Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/Services/Catalog/MyEcomm.Catalog.Api",
+      "env": { "ASPNETCORE_ENVIRONMENT": "Development" },
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "Cart API (5102)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-cart",
+      "program": "${workspaceFolder}/src/Services/Cart/MyEcomm.Cart.Api/bin/Debug/net8.0/MyEcomm.Cart.Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/Services/Cart/MyEcomm.Cart.Api",
+      "env": { "ASPNETCORE_ENVIRONMENT": "Development" },
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "Identity API (5103)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-identity",
+      "program": "${workspaceFolder}/src/Services/Identity/MyEcomm.Identity.Api/bin/Debug/net8.0/MyEcomm.Identity.Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/Services/Identity/MyEcomm.Identity.Api",
+      "env": { "ASPNETCORE_ENVIRONMENT": "Development" },
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "Order API (5104)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-order",
+      "program": "${workspaceFolder}/src/Services/Order/MyEcomm.Order.Api/bin/Debug/net8.0/MyEcomm.Order.Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/Services/Order/MyEcomm.Order.Api",
+      "env": { "ASPNETCORE_ENVIRONMENT": "Development" },
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "Gateway (5100)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-gateway",
+      "program": "${workspaceFolder}/src/Gateway/MyEcomm.Gateway/bin/Debug/net8.0/MyEcomm.Gateway.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/Gateway/MyEcomm.Gateway",
+      "env": { "ASPNETCORE_ENVIRONMENT": "Development" },
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "React SPA (5173)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "${workspaceFolder}/client",
+      "console": "integratedTerminal",
+      "serverReadyAction": {
+        "pattern": "Local:.*http://localhost:([0-9]+)",
+        "uriFormat": "http://localhost:%s",
+        "action": "openExternally"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "🚀 MyEcomm — Full Stack",
+      "configurations": [
+        "Catalog API (5101)",
+        "Cart API (5102)",
+        "Identity API (5103)",
+        "Order API (5104)",
+        "Gateway (5100)",
+        "React SPA (5173)"
+      ],
+      "stopAll": true
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+/* eShop Design System — Global Reset */
+:root {
+  --fk-blue: #047857;        /* primary */
+  --fk-yellow: #047857;      /* cta (add-to-cart) */
+  --fk-orange: #059669;      /* cta (buy now / place order) */
+  --fk-green: #10B981;       /* secondary (ratings, badges) */
+  --fk-bg: #F8FAFC;          /* background */
+  --fk-white: #ffffff;
+  --fk-text: #212121;
+  --fk-text-secondary: #878787;
+  --fk-border: #f0f0f0;
+  --fk-red: #ff6161;
+  --fk-logo-yellow: #a7f3d0; /* logo tagline mint */
+
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--fk-text);
+  background: var(--fk-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: var(--fk-bg);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: var(--fk-text);
+  line-height: 1.3;
+}
+
+a {
+  color: var(--fk-blue);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+

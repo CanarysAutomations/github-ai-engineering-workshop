@@ -1,0 +1,42 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "catalog-service",
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": ["run", "--project", "src/Services/Catalog/MyEcomm.Catalog.Api", "--no-build"],
+      "port": 5101
+    },
+    {
+      "name": "cart-service",
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": ["run", "--project", "src/Services/Cart/MyEcomm.Cart.Api", "--no-build"],
+      "port": 5102
+    },
+    {
+      "name": "identity-service",
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": ["run", "--project", "src/Services/Identity/MyEcomm.Identity.Api", "--no-build"],
+      "port": 5103
+    },
+    {
+      "name": "order-service",
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": ["run", "--project", "src/Services/Order/MyEcomm.Order.Api", "--no-build"],
+      "port": 5104
+    },
+    {
+      "name": "gateway",
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": ["run", "--project", "src/Gateway/MyEcomm.Gateway", "--no-build"],
+      "port": 5100
+    },
+    {
+      "name": "client",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "client",
+      "port": 5173
+    }
+  ]
+}

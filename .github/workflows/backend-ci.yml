@@ -1,0 +1,124 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'src/**'
+      - '*.sln'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'src/**'
+      - '*.sln'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  code-quality: write
+
+jobs:
+  build:
+    name: Build, Test, and Coverage (.NET)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: nuget-packages-${{ runner.os }}-${{ hashFiles('global.json', '**/*.csproj') }}
+          restore-keys: |
+            nuget-packages-${{ runner.os }}-
+
+      - name: Restore
+        run: dotnet restore MyEcomm.sln
+
+      - name: Build
+        run: dotnet build MyEcomm.sln --configuration Release --no-restore -warnaserror
+
+      - name: Run tests with coverage
+        run: |
+          dotnet test src/Tests/MyEcomm.Backend.Tests/MyEcomm.Backend.Tests.csproj --configuration Release --no-build --verbosity normal --results-directory ./TestResults /p:CollectCoverage=true /p:CoverletOutput=${{ github.workspace }}/TestResults/Coverage/ /p:CoverletOutputFormat=cobertura /p:Threshold=80 /p:ThresholdType=line /p:ThresholdStat=total
+
+      - name: Locate coverage file
+        id: coverage
+        run: |
+          cov=$(find ./TestResults/Coverage -type f -name "coverage.cobertura.xml" | head -n1 || true)
+          echo "file=$cov" >> "$GITHUB_OUTPUT"
+          if [ -z "$cov" ]; then
+            echo "Coverage file not found. Failing quality gate."
+            exit 1
+          fi
+
+      - name: Coverage quality gate (>= 80% lines)
+        if: github.event_name == 'pull_request'
+        run: |
+          file="${{ steps.coverage.outputs.file }}"
+          rate=$(grep -oE 'line-rate="[0-9.]+"' "$file" | head -n1 | cut -d'"' -f2)
+          if [ -z "$rate" ]; then
+            echo "Unable to parse line-rate from $file"
+            exit 1
+          fi
+          pct=$(awk "BEGIN { printf \"%.2f\", $rate * 100 }")
+          echo "Backend line coverage: ${pct}%"
+          awk "BEGIN { exit !($pct >= 80.0) }" || { echo "Coverage gate failed: ${pct}% < 80%"; exit 1; }
+
+      - name: Publish backend artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-build
+          path: |
+            src/**/bin/Release
+
+      - name: Upload backend test and coverage results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-test-results
+          path: |
+            TestResults/**
+
+      - name: Upload coverage report
+        if: steps.coverage.outputs.file != '' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
+        uses: actions/upload-code-coverage@v1
+        with:
+          file: ${{ steps.coverage.outputs.file }}
+          language: C#
+          label: code-coverage/dotnet
+          
+      # convert cobertura to HTML report for easier viewing
+
+      - name: Generate HTML coverage report
+        if: always() && steps.coverage.outputs.file != ''
+        uses: danielpalme/ReportGenerator-GitHub-Action@v5
+        with:
+          reports: '${{ steps.coverage.outputs.file }}'
+          targetdir: 'CoverageReport'
+          reporttypes: 'Html;MarkdownSummaryGithub;Cobertura'
+      
+      - name: Add coverage to workflow summary
+        if: always() && steps.coverage.outputs.file != ''
+        run: |
+          if [ -f CoverageReport/SummaryGithub.md ]; then
+            cat CoverageReport/SummaryGithub.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Coverage summary not found at CoverageReport/SummaryGithub.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload HTML coverage report
+        if: always() && steps.coverage.outputs.file != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: code-coverage-report
+          path: CoverageReport
+          retention-days: 14
