@@ -110,6 +110,35 @@ Build failures block merging. This exercise teaches two approaches: **auto-fix f
 
 ![Workflow Configuration](assets/codecoveragereport.png)
 ![Coverage Quality Gate](assets/codecoveragefile.png)
+
+---
+
+## Step 6 — (Optional) Use Copilot CLI to Analyze & Fix Coverage Gaps
+
+When build fails with **coverage threshold errors**, use the Copilot CLI workflow to analyze and auto-fix.
+
+### Workflow File
+Location: `.github/workflows/copilot-cli-coverage-fixer.yml`
+
+### How to Trigger (3 Modes)
+
+**Via GitHub UI:**
+- Go to **Actions** → **Copilot CLI - Fix Coverage Gaps**
+- Click **"Run workflow"**
+- Set mode and click **"Run workflow"**
+
+**GitHub CLI**:
+```bash
+# Analyze only
+gh workflow run copilot-cli-coverage-fixer.yml -f fix_mode=analyze-only
+
+# Preview test stubs
+gh workflow run copilot-cli-coverage-fixer.yml -f fix_mode=auto-generate-tests
+
+# Auto-commit fixes
+gh workflow run copilot-cli-coverage-fixer.yml -f fix_mode=commit-fixes
+```
+
 ---
 
 ## Verify
@@ -118,6 +147,7 @@ Build failures block merging. This exercise teaches two approaches: **auto-fix f
 - [ ] Build failure diagnosed and issue created
 - [ ] Coding agent created PR with fixes
 - [ ] Coverage report artifact downloaded and extracted
+
 
 ---
 

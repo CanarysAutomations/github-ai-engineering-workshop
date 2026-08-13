@@ -102,42 +102,13 @@ To automatically request Copilot Review on every PR:
    - draft PR
 - Save settings
 
-**Benefit**: All future PRs automatically receive Copilot review before merge, enforcing code quality standards without manual assignment.
-
-Reference: [Configuring automatic code review by GitHub Copilot — GitHub Docs](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review)
-
----
-## Step 7 — (Optional) Use Copilot CLI to Analyze & Fix PR Issues
-
-When CI fails and the PR needs review :
-
-1. **Trigger Copilot CLI in PR comment**:
-   ```
-   @copilot-cli analyze this PR
-   ```
-
-2. **Copilot CLI examines**:
-   - Build failures / test failures
-   - Code coverage gaps
-   - Pattern violations against `.github/copilot-instructions.md`
-
-4. **For failing tests**, prompt:
-   ```
-   @copilot-cli what tests are missing for wishlist endpoints coverage?
-   ```
-   → Copilot CLI suggests specific test cases → Add to `src/Tests/` → Re-run CI
-
-5. **Merge when Copilot CLI approves** — Your confidence increases with AI-validated analysis
-
-
-
+> **Note**: Reference link for [Configuring automatic code review by GitHub Copilot — GitHub Docs](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review)
 
 ---
 ## Verify
 
 - [ ] Issue assigned to Copilot
 - [ ] PR created for the implementation
-- [ ] UserProfile.Api CRUD and wishlist UI are implemented
 - [ ] Copilot Review Agent feedback received
 
 ---
