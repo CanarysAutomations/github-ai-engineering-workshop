@@ -42,19 +42,25 @@ Note the issue number `<ISSUE-NUMBER>` (e.g., #XX).
 
 ![Assign to Copilot Coding Agent](assets/codingagent.png)
 
- 
-### **Option 2: GitHub.com → Click Copilot Icon & Select Model**
-- Click Copilot icon (🤖) under sub-issue
-- Select your preferred model in modal
-- Type prompt: `Implement issue #<issue_number>: Wishlist Feature`
 
- 
+### **Option 2: (Advanced) Assign to Multiple Agents**
+- Click Assignees → **Settings**
+- Select **Copilot Coding Agent** (primary)
+- In **Suggestions** field, enable:
+  - **Claude** 
+  - **Codex** 
+- Each agent runs independently and provides feedback in PR thread
+- **When to use**: Complex features requiring multi-perspective validation
+
+![Assign to Multiple Agents](assets/partyagent.png)
+
+
+> **Note**: To use third-party agents, you must enable them in **Organization Settings → Code, planning and automation → Copilot → Cloud Agents** and enable partner agents. See [Copilot Cloud Agent Settings](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies) for details.
+
 ### **Option 3: VS Code → Copilot Chat with Cloud Agent**
 - Open Copilot Chat in VS Code (`Ctrl+Shift+I`)
 - Select Cloud Agent from dropdown
 - Type prompt: `Implement issue #<issue_number>: Wishlist Feature`
-
- 
 ---
 ## Step 3 — Implement Wishlist Feature
 
@@ -70,7 +76,7 @@ Copilot coding agent generates code for Wishlist endpoints and DTOs. Complete de
 For example
 
 ```
-@copilot run and show the UI functionality of wishlist feature
+@copilot do the functionality check of wishlist feature with playwright.
 ```
 
 ---
@@ -82,6 +88,50 @@ For example
 - Copilot Review Agent reviews code
 
 ![Request Review from Copilot Review Agent](assets/copilotreview.png)
+
+---
+## Step 6 — (Optional) Enable Automatic Copilot Code Review
+
+To automatically request Copilot Review on every PR:
+
+- Go to **Repository Settings → Code,planning and automation**
+- Under **Ruleset**, create **New branch ruleset** (or **Automatic code review**)
+- In branch rules enable **Automatically request Copilot code review** to ON
+- (Optional) Configure review scope:
+   - new pushes
+   - draft PR
+- Save settings
+
+**Benefit**: All future PRs automatically receive Copilot review before merge, enforcing code quality standards without manual assignment.
+
+Reference: [Configuring automatic code review by GitHub Copilot — GitHub Docs](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review)
+
+---
+## Step 7 — (Optional) Use Copilot CLI to Analyze & Fix PR Issues
+
+When CI fails and the PR needs review :
+
+1. **Trigger Copilot CLI in PR comment**:
+   ```
+   @copilot-cli analyze this PR
+   ```
+
+2. **Copilot CLI examines**:
+   - Build failures / test failures
+   - Code coverage gaps
+   - Pattern violations against `.github/copilot-instructions.md`
+
+4. **For failing tests**, prompt:
+   ```
+   @copilot-cli what tests are missing for wishlist endpoints coverage?
+   ```
+   → Copilot CLI suggests specific test cases → Add to `src/Tests/` → Re-run CI
+
+5. **Merge when Copilot CLI approves** — Your confidence increases with AI-validated analysis
+
+
+
+
 ---
 ## Verify
 

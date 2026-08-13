@@ -60,6 +60,7 @@ By the end, you'll have:
 | 10 | [GHAS Dependency Scanning](workshop/exercise-10-ghas-dependency-scanning.md) | GitHub Advanced Security, Dependency Scanning | 8 min |
 | 11 | [GHAS Secret Scanning](workshop/exercise-11-ghas-secret-scanning.md) | GitHub Advanced Security, Secret Scanning | 8 min |
 | 12 | [UI Automation Testing](workshop/exercise-12-ui-automation-testing.md) | Copilot UI Automation | 8 min |
+| 13 | [Infrastructure as Code: Generate Terraform](workshop/exercise-13-infrastructure-as-ai.md) | Copilot Chat, Terraform | 8 min |
 
 
 

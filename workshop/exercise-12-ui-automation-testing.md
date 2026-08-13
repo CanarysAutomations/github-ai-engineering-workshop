@@ -76,4 +76,4 @@ After the agent finishes, it provides a concise test report and any evidence not
 
 ---
 
-**Next**: [Workshop Complete](../README.md)
+**Next**: [Exercise 13 — Infrastructure as Code: Deploy Complete App](exercise-13-infrastructure-as-ai.md)
