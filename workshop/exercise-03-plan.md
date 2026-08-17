@@ -17,7 +17,7 @@ The **Plan** transforms the spec into concrete architecture: Service Boundaries,
 In Copilot Chat, paste this concise plan prompt:
 
 ```
-/speckit.plan Match the existing API,UI pattern exactly for the wishlist and product review feature, including colors, button styles, spacing, icons, and interaction states.
+/speckit.plan Wishlist: nav link in header alongside cart (fk-cart-btn style), save-to-wishlist action in cart item row next to REMOVE, wishlist page mirrors catalog grid. Reviews: rating badge + review list on product detail page below description; review submission form on orders page per order item.
 
 
 ```

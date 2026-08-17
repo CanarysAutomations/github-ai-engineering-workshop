@@ -154,7 +154,7 @@ Follow the repository run sequence so the backend services and frontend are star
 ### Option 1 — Use VS Code Run and Debug Extension
 
 Select **Run and Debug** → **MyEcomm-Full Stack** → **Run**.
-Ensure that the application starts successfully and is accessible at **[http://localhost:5173](http://localhost:5173)**.
+Ensure that the application starts successfully and is accessible at http://localhost:5173/.
 
 ### Option 2 — Use the terminal
 

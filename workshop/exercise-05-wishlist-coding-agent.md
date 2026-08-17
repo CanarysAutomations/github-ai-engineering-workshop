@@ -70,13 +70,13 @@ Copilot coding agent generates code for Wishlist endpoints and DTOs. Complete de
 ![Session view](assets/sessionview.png)
 
 ---
-## Step 4 — @Copilot for any Modifications
+## Step 4 — @Copilot for any Modifications (Optional)
 - If you need to modify the generated code, you can @mention Copilot in the PR followed by your request. 
 
 For example
 
 ```
-@copilot do the functionality check of wishlist feature with playwright.
+@copilot Write Playwright e2e tests that verify the wishlist add/remove/view flows and add a GitHub Actions workflow to run them on PR.
 ```
 
 ---
@@ -105,10 +105,23 @@ To automatically request Copilot Review on every PR:
 > **Note**: Reference link for [Configuring automatic code review by GitHub Copilot — GitHub Docs](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-on-github/set-up-copilot/configure-automatic-review)
 
 ---
+
+## Step 7 — Update VS Code Launch Config After Merge
+
+After merging and pulling locally, prompt the local agent in Copilot Chat:
+
+```
+Update .vscode/launch.json and .vscode/tasks.json so the Wishlist service is included in Run and Debug, preserving existing configs.
+```
+
+Then restart **Run & Debug → MyEcomm-Full Stack**.
+---
+
 ## Verify
 
 - [ ] Issue assigned to Copilot
 - [ ] PR created for the implementation
+- [ ] Playwright e2e tests for wishlist feature added
 - [ ] Copilot Review Agent feedback received
 
 ---

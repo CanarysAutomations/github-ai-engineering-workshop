@@ -28,6 +28,7 @@ Note the issue number `<ISSUE-NUMBER>` — you will reference it in later exerci
 
 ![GitHub Issue Number](assets/issuecreated.png)
 
+
 ## Step 2 — Run Spec Kit Constitution
 
 In Copilot Chat (`Ctrl+Alt+I`), paste this minimal constitution prompt:
@@ -43,7 +44,7 @@ Copilot instruction file contains the application patterns and rules for eShop m
 ![Spec Kit Constitution](assets/constitution.png)
 ---
 
-## Step 2 — Verify & Commit
+## Step 3 — Verify & Commit
 
 After Copilot completes:
 

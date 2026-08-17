@@ -23,23 +23,9 @@ Code Quality scans your codebase for bugs, security issues, and violations. This
 ---
  
  
-## Step 2 — Create PR for Review Feature from VS Code
+## Step 2 — Ensure PR is Open
  
-**Create PR from GitHub extension**
-- Click **GitHub** extension icon on left sidebar
-- Click **Create Pull Request** button
-- VS Code opens PR creation dialog
- 
-**Generate title with Copilot**
-- Click the **Copilot** icon in PR title field
-- Copilot auto-generates title for review feature
-- Accept or edit the title
- 
-**Add description and create PR**
-- Add PR description (scope, changes, testing)
-- Review the details
-- Click **Create** button
-- Verify PR created in GitHub
+If you haven't already, complete **Ex 06 Step 6** to create the PR for the Reviews feature. Code Quality findings will appear against that open PR.
 
 
  

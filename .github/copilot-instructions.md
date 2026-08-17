@@ -8,3 +8,5 @@
 6. **YARP Gateway** — All frontend calls via gateway (:5100). No direct service calls from client.
 7. **Concurrency** — Use ConcurrentDictionary atomic methods (TryAdd, TryUpdate, TryRemove). If TryUpdate fails, retry up to 3 times before returning 409 Conflict.
 8. **Swagger + CORS** — Enable `/swagger` per service. CORS: `http://localhost:5173` and `http://localhost:5100`.
+9. **Frontend UI** — All frontend work MUST follow the rules in [`.github/instructions/ui.instructions.md`](.github/instructions/ui.instructions.md) exactly.
+
