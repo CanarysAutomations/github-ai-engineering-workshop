@@ -30,7 +30,7 @@ By the end, you'll have:
 - **[Git CLI](https://git-scm.com)**
 - **[UV](https://astral.sh/uv)**
 - **[Spec Kit](https://github.com/github/spec-kit)**
-- **[GitHub Extensions for VS Code](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)**
+- **[GitHub Extension](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)**
 - **GitHub MCP Server** Enabled
 - **Playwright MCP Server** Enabled
 - **GitHub Advanced Security** Enabled 
