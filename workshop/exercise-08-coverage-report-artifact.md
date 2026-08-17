@@ -1,7 +1,7 @@
 # Exercise 08 — Diagnose CI Build Failures and Fix with Coding Agent
 
 **Duration**: 6 minutes
-**Copilot Feature**: GitHub Actions, Coding Agent
+**GitHub/Copilot Feature**: GitHub Actions, Coding Agent, Copilot CLI
 **Goal**: Configure code coverage, diagnose a CI build failure, and assign it to the coding agent to fix.
 
 ---
@@ -109,6 +109,34 @@ Build failures block merging. This exercise shows how to configure coverage thre
 
 ![Workflow Configuration](assets/codecoveragereport.png)
 ![Coverage Quality Gate](assets/codecoveragefile.png)
+
+---
+
+## Step 6 — Use Copilot CLI to Analyze & Fix Coverage Gaps (Optional)
+
+When build fails with **coverage threshold errors**, use the Copilot CLI workflow to analyze and auto-fix.
+
+### Workflow File
+Location: `.github/workflows/copilot-cli-coverage-fixer.yml`
+
+### How to Trigger (3 Modes)
+
+**Via GitHub UI:**
+- Go to **Actions** → **Copilot CLI - Fix Coverage Gaps**
+- Click **"Run workflow"**
+- Set mode and click **"Run workflow"**
+
+**GitHub CLI**:
+```bash
+# Analyze only
+gh workflow run copilot-cli-coverage-fixer.yml -f fix_mode=analyze-only
+
+# Preview test stubs
+gh workflow run copilot-cli-coverage-fixer.yml -f fix_mode=auto-generate-tests
+
+# Auto-commit fixes
+gh workflow run copilot-cli-coverage-fixer.yml -f fix_mode=commit-fixes
+```
 ---
 
 ## Verify

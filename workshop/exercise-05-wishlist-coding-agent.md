@@ -43,7 +43,7 @@ Note the issue number `<ISSUE-NUMBER>` (e.g., #XX).
 ![Assign to Copilot Coding Agent](assets/codingagent.png)
 
 
-### **Option 2: (Advanced) Assign to Multiple Agents**
+### **Option 2: Assign to Multiple Agents (Optional)**
 - Click Assignees → **Settings**
 - Select **Copilot Coding Agent** (primary)
 - In **Suggestions** field, enable:
@@ -90,7 +90,7 @@ For example
 ![Request Review from Copilot Review Agent](assets/copilotreview.png)
 
 ---
-## Step 6 — (Optional) Enable Automatic Copilot Code Review
+## Step 6 — Enable Automatic Copilot Code Review (Optional)
 
 To automatically request Copilot Review on every PR:
 
