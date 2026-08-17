@@ -1,7 +1,7 @@
 # Exercise 00 — Prerequisites 
 
-> **Duration**: 8 minutes
-> **Copilot Feature**: -
+> **Duration**: 8 minutes<br>
+> **GitHub/Copilot Feature**: -<br>
 > **Goal**: Ensure your development environment is ready for the eShop microservices workshop. Verify that .NET SDK, Git, Spec Kit CLI, GitHub Copilot, and GitHub MCP server are installed and configured. 
 
 ---

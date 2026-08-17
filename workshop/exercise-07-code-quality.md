@@ -1,7 +1,7 @@
 # Exercise 07 — Enable Code Quality, Create PR and Fix Code Quality Issues
 
-> **Duration**: 8 minutes  
-> **Copilot Feature**: Code Quality, PR Copilot  
+> **Duration**: 8 minutes<br>
+> **GitHub/Copilot Feature**: Code Quality, PR Copilot<br>
 > **Goal**: Enable repository Code Quality scanning and create your first quality-checked PR from VS Code.
 
 ---

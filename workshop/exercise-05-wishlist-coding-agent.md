@@ -1,7 +1,7 @@
 # Exercise 05 — Wishlist Implementation with Copilot Coding Agent
 
-> **Duration**: 10 minutes
-> **Copilot Feature**: Copilot Coding Agent, Issue Assignment
+> **Duration**: 10 minutes<br>
+> **GitHub/Copilot Feature**: Copilot Coding Agent, Issue Assignment, Code Review<br>
 > **Goal**: Assign Wishlist (straightforward CRUD) to coding agent and observe clean, pattern-consistent code generation.
 
 ---

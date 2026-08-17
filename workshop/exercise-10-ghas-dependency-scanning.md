@@ -1,7 +1,7 @@
 # Exercise 10 — Remediate Dependency Scanning Findings
 
-> **Duration**: 8 minutes
-> **Copilot Feature**: Dependabot, Dependency Scanning
+> **Duration**: 8 minutes<br>
+> **GitHub/Copilot Feature**: Dependabot, Dependency Scanning<br>
 > **Goal**: Remove the vulnerable client dependency while keeping the frontend build and runtime behavior unchanged.
 
 ---

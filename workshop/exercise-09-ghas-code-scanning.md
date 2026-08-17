@@ -1,7 +1,7 @@
 # Exercise 09 — Enable GHAS + Fix Code Scanning
 
-> **Duration**: 8 minutes
-> **Copilot Feature**: GitHub Advanced Security, Code Scanning
+> **Duration**: 8 minutes<br>
+> **GitHub/Copilot Feature**: GitHub Advanced Security, Code Scanning, Copilot Autofix<br>
 > **Goal**: Enable code scanning, inspect the alert, use Copilot Autofix, and commit the fix to a new branch without changing checkout behavior.
 
 ---

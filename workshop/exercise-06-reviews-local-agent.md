@@ -1,7 +1,7 @@
 # Exercise 06 — Product Reviews Implementation with Local Agent
 
-> **Duration**: 10 minutes
-> **Copilot Feature**: Local Agent Assignment, Complex Domain Logic
+> **Duration**: 10 minutes<br>
+> **GitHub/Copilot Feature**: Local Agent Assignment, GitHub Extension Issue, Code Review<br>
 > **Goal**: Assign Reviews (with purchase verification and rating aggregation) to the GitHub Copilot local agent and observe domain-focused code.
 
 ---

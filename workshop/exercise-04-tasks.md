@@ -1,7 +1,7 @@
 # Exercise 04 — Tasks and Sub-Issues: Break into Implementation Work Items
 
-> **Duration**: 10 minutes
-> **Copilot Feature**: Spec Kit Checklist, Tasks & GitHub MCP Sub-Issues
+> **Duration**: 10 minutes<br>
+> **GitHub/Copilot Feature**: Spec Kit Tasks, GitHub MCP Sub-Issues<br>
 > **Goal**: Decompose the plan into ordered tasks, create GitHub sub-issues, and preserve traceability for implementation.
 
 ---

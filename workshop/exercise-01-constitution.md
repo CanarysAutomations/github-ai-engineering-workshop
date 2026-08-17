@@ -1,7 +1,7 @@
 # Exercise 01 — Constitution: Define eShop Microservices Principles
 
-> **Duration**: 8 minutes
-> **Copilot Feature**: Spec Kit Constitution
+> **Duration**: 8 minutes<br>
+> **GitHub/Copilot Feature**: Spec Kit Constitution, GitHub Issues<br>
 > **Goal**: Establish guiding principles for the eShop microservices architecture that all features will follow.
 
 ---

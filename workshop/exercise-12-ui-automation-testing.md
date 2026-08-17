@@ -1,7 +1,7 @@
 # Exercise 12 — Run UI Automation with UIAutomationTester
 
-> **Duration**: 10 minutes
-> **Copilot Feature**: Custom Agent Selection, Skill-Driven Testing
+> **Duration**: 10 minutes<br>
+> **GitHub/Copilot Feature**: Custom Agent Selection, Copilot Skills<br>
 > **Goal**: Select the UIAutomationTester agent, run the UI automation flow from skill.md, and capture the test results.
 
 ---

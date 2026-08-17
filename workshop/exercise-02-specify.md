@@ -1,7 +1,7 @@
 # Exercise 02 — Specify: Define Wishlist + Reviews Requirements
 
-> **Duration**: 10 minutes
-> **Copilot Feature**: Spec Kit Specify, GitHub MCP (#issue_read)
+> **Duration**: 10 minutes<br>
+> **GitHub/Copilot Feature**: Spec Kit Specify, GitHub MCP <br>
 > **Goal**: Transform the parent issue into a detailed specification with user goals, acceptance criteria, and non-functional requirements.
 
 ---

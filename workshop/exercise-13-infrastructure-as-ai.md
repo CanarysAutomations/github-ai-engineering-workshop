@@ -1,7 +1,7 @@
 # Exercise 13 — Infrastructure as Code: Generate Terraform Scripts with Copilot
 
-> **Duration**: 8 minutes  
-> **Copilot Feature**: Copilot Chat, Terraform Generation  
+> **Duration**: 8 minutes<br>
+> **GitHub/Copilot Feature**: Copilot Chat, Terraform Generation<br>
 > **Goal**: Use one prompt to generate complete Terraform scripts for deploying the eShop microservices app on Azure.
 
 ---

@@ -1,7 +1,7 @@
 # Exercise 11 — Enable Secret Scanning + Advanced Security Plugin
 
-> **Duration**: 8 minutes
-> **Copilot Feature**: Secret Scanning, Advanced Security Plugin
+> **Duration**: 8 minutes<br>
+> **GitHub/Copilot Feature**: Secret Scanning, Advanced Security Plugin<br>
 > **Goal**: Turn on secret scanning, enable the Advanced Security plugin, and replace the fake secret placeholder without affecting the application.
 
 ---

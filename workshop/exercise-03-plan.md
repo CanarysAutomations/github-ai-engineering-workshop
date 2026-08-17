@@ -1,7 +1,7 @@
 # Exercise 03 — Plan: Design the Technical Architecture
 
-> **Duration**: 8 minutes
-> **Copilot Feature**: Spec Kit Plan
+> **Duration**: 8 minutes<br>
+> **GitHub/Copilot Feature**: Spec Kit Plan<br>
 > **Goal**: Translate the specification into a concrete technical design: API contracts, data models, service boundaries, and integration flows.
 
 ---
