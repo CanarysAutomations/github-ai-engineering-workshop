@@ -28,9 +28,9 @@ By the end, you'll have:
 - **[Node.js 18+](https://nodejs.org)**
 - **npm 8+** (Bundled with Node.js)
 - **[Git CLI](https://git-scm.com)**
-- **[Spec Kit CLI](https://github.com/github/spec-kit)**
 - **[UV](https://astral.sh/uv)**
-- **[GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)**
+- **[Spec Kit](https://github.com/github/spec-kit)**
+- **[GitHub Extensions for VS Code](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)**
 - **GitHub MCP Server** Enabled
 - **Playwright MCP Server** Enabled
 - **GitHub Advanced Security** Enabled 
