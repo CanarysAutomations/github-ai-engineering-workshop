@@ -54,16 +54,15 @@ Review the generated diff, commit the new branch, and confirm the alert is close
 
 ## Verify
 
-- [ ] Code scanning alert is resolved or marked fixed
-- [ ] No shell/process call remains in the client
-- [ ] Order API and cart checkout behavior still work
-- [ ] Fix is committed in a new branch
+- [ ] Code scanning is enabled
+- [ ] Vulnerability is resolved or marked fixed
+- [ ] Fix is committed to a new branch
 
 ---
 
-## Key Takeaway
+## Productivity Benefit
 
-> Fix the sink, not the feature: remove the unsafe flow while preserving the working path.
+> A CodeQL vulnerability that reaches production can mean days of incident response. Copilot Autofix surfaces the exact data flow and proposes the fix in the same PR cycle — turning a potential security incident into a 2-minute review.
 
 ---
 

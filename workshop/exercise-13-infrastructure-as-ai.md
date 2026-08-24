@@ -60,17 +60,15 @@ terraform apply
 
 ## Verify
 
-- [ ] Terraform files generated in `/infra` directory
-- [ ] No syntax errors in main.tf
-- [ ] All 5 backend services defined as Container Instances
-- [ ] Gateway and frontend included
-- [ ] Variables and outputs present
+- [ ] Terraform files are generated
+- [ ] All services are defined in infrastructure code
+- [ ] Configuration is production-ready
 
 ---
 
-## Key Takeaway
+## Productivity Benefit
 
-> AI-generated Terraform is infrastructure-as-code ready for version control and CI/CD deployment pipelines.
+> Writing production Terraform for 6 Azure services from scratch takes a cloud engineer 1–2 days. One Copilot prompt produces a complete, version-controllable IaC baseline in under a minute — ready to customise and connect to a CI/CD pipeline immediately.
 
 ---
 

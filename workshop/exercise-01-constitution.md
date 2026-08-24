@@ -14,7 +14,6 @@ The **Constitution** defines architectural principles once: Minimal APIs (no Con
 
 ## Step 1 — Create Parent GitHub Issue
 
-
 Go to **github.com** and use **Copilot** **`/create-issue`** followed by prompt
 
 Copy and paste this template:
@@ -28,8 +27,16 @@ Note the issue number `<ISSUE-NUMBER>` — you will reference it in later exerci
 
 ![GitHub Issue Number](assets/issuecreated.png)
 
+> **Optional**: Use [Jira Alternative Workflow](jira-alternative-workflow.md) if your team prefers Jira.
+
 
 ## Step 2 — Run Spec Kit Constitution
+
+Create a new branch feature branch
+
+```bash
+git checkout -b feature/wishlist-reviews
+```
 
 In Copilot Chat (`Ctrl+Alt+I`), paste this minimal constitution prompt:
 
@@ -56,16 +63,15 @@ git add .specify/constitution.md && git commit -m "chore: constitution"
 
 ## Verify
 
-- [ ] `.specify/constitution.md` exists
-- [ ] Document covers all core principles (APIs, storage, auth, DTOs, gateway, concurrency, testing)
-- [ ] Constitution aligns with the eShop microservices rules
-- [ ] Committed to Git
+- [ ] Constitution document is created and committed
+- [ ] Principles align with eShop microservices patterns
+- [ ] Parent GitHub issue is established
 
 ---
 
-## Key Takeaway
+## Productivity Benefit
 
-> Write the Constitution once; every future feature validates against it. One-time investment prevents rework and architectural drift.
+> One-time 8-minute investment that pays compound returns: every agent, every PR, every spec generated later automatically inherits these rules — eliminating a whole class of architecture review comments.
 
 ---
 

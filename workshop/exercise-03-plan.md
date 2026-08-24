@@ -17,7 +17,13 @@ The **Plan** transforms the spec into concrete architecture: Service Boundaries,
 In Copilot Chat, paste this concise plan prompt:
 
 ```
-/speckit.plan Wishlist: nav link in header alongside cart (fk-cart-btn style), save-to-wishlist action in cart item row next to REMOVE, wishlist page mirrors catalog grid. Reviews: rating badge + review list on product detail page below description; review submission form on orders page per order item.
+/speckit.plan
+Wishlist:
+- Header: nav link alongside Cart using fk-cart-btn style WITH a count badge (fk-cart-count class, same as Cart badge) showing number of wishlist items.
+- CartItemRow only: "SAVE TO WISHLIST" inline action button (fk-cart-item-remove style) placed after REMOVE. Clicking it MUST save to wishlist AND remove the item from the cart in a single action (wishlistApi.addItem + onRemove). Do NOT add any wishlist button to ProductDetailPage.
+- WishlistPage (/wishlist): list layout (not grid) showing image, name, price, REMOVE per item. Page MUST include a "MOVE ALL TO CART" button that calls a backend MoveAllToCart endpoint (POST /api/wishlist/move-to-cart) which adds all wishlist items to cart via CartServiceClient and clears the wishlist on success.
+- WishlistContext: a React context (WishlistContext.tsx) exposing itemCount and refreshWishlist, wrapping the app in main.tsx, used by Header for the count badge and by WishlistPage/CartItemRow after mutations.
+Reviews: rating badge + review list on product detail page below description; review submission form on orders page per order item.
 
 
 ```
@@ -49,16 +55,15 @@ git add .specs/001-add-wishlist-reviews/plan.md && git commit -m "spec: plan"
 
 ## Verify
 
-- [ ] `.specs/001-add-wishlist-reviews/plan.md` exists
-- [ ] Endpoint and integration flow for UserProfile and Reviews is clear
-- [ ] Status codes 201/200/204/400/404/401/409 are defined
-- [ ] ConcurrentDictionary concurrency handling is explicit
+- [ ] Architecture plan is documented and committed
+- [ ] Service boundaries and endpoints are defined
+- [ ] Integration flows and data models are clear
 
 ---
 
-## Key Takeaway
+## Productivity Benefit
 
-> Plan is the blueprint. Developers should be able to start coding from the endpoint list and data models.
+> A generated plan with endpoint contracts and data models cuts design meeting time by 60–80%. Developers start coding with a clear blueprint instead of discovering API shape mid-implementation and triggering late-stage rework.
 
 ---
 

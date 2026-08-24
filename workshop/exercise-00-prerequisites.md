@@ -211,16 +211,15 @@ The frontend should be available at http://localhost:5173/.
 
 ## Verify
 
-- [ ] Core CLI tooling is installed (.NET SDK, Git, uv, Spec Kit CLI)
-- [ ] GitHub Copilot is installed
-- [ ] GitHub MCP server is configured
-- [ ] GitHub Advanced Security and code quality tools are enabled
+- [ ] Development environment is fully configured
+- [ ] GitHub Copilot and MCP server are enabled
+- [ ] eShop application starts successfully
 
 ---
 
-## Key Takeaway
+## Productivity Benefit
 
-> Ensure all prerequisites are installed and configured correctly before proceeding to the next exercise.
+> 10 minutes of environment setup now saves hours of blocked-agent frustration later. A configured MCP server alone eliminates manual copy-paste of issue context across every future exercise.
 
 ---
 

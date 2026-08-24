@@ -14,8 +14,7 @@ Code Quality scans your codebase for bugs, security issues, and violations. This
  
 ## Step 1 — Enable Code Quality
  
-1. Go to **Repository → Settings → Security and Quality → Code Quality**
-2. Click the **Enable Code Quality** toggle
+Go to **Repository → Settings → Security and Quality → Code Quality**, Click the **Enable Code Quality**.
 
 
 >**Note**: If you do not see the Code Quality tab, refer to [exercise-00-prerequisites.md](exercise-00-prerequisites.md) for setup instructions.
@@ -27,8 +26,6 @@ Code Quality scans your codebase for bugs, security issues, and violations. This
  
 If you haven't already, complete **Ex 06 Step 6** to create the PR for the Reviews feature. Code Quality findings will appear against that open PR.
 
-
- 
 ---
  
 ## Step 3 — Review Findings & Generate Fix for Code Quality Issues
@@ -67,16 +64,15 @@ If you haven't already, complete **Ex 06 Step 6** to create the PR for the Revie
 
 ## Verify
 
-- [ ] Code Quality enabled
-- [ ] PR created successfully
-- [ ] Fixes applied for Code Quality issues
-- [ ] Build passes in Actions 
+- [ ] Code Quality scanning is enabled
+- [ ] Quality issues are identified and fixed
+- [ ] Build pipeline passes successfully 
 
 ---
 
-## Key Takeaway
+## Productivity Benefit
 
-> Code Quality scans catch bugs, security issues, and violations early. Copilot can assist in generating fixes for Code Quality issues.
+> Finding and fixing a code quality issue post-release costs 10–100× more than catching it on a PR. Copilot Autofix closes the loop in seconds — the same fix that would require a developer to context-switch, investigate, patch, and re-review.
 
 ---
 

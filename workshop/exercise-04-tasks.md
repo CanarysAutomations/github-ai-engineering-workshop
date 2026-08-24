@@ -20,8 +20,8 @@ Paste this focused tasks prompt:
 ```
 /speckit.tasks 2 phases only
 
-Complete Wishlist feature
-Complete Reviews feature
+Complete Wishlist Feature — wishlist is accessible from header nav and CartItemRow only; do NOT add anything wishlist-related to ProductDetailPage
+Complete Reviews Feature
 
 
 ```
@@ -33,28 +33,45 @@ Complete Reviews feature
 Use the task list to create sub-issues linked to the parent issue from Exercise 01.
 
 ```text
-Refer #file:tasks.md and Use GitHub MCP #sub_issue_write to create detailed sub-issue per phase to the parent issue number 11
+Refer #file:tasks.md and Use GitHub MCP #sub_issue_write to create detailed sub-issue per phase to the parent issue number <ISSUE-NUMBER>
 ```
 
 > **Tip**: If the MCP tool is unavailable, create the sub-issues manually.
 
 ![Spec Kit Tasks](assets/subissue.png)
 
+> **Optional**: Use [Jira Alternative Workflow](jira-alternative-workflow.md) if your team prefers Jira.
+
+
+## Step 4 — Create Branch and raise PR
+
+```bash
+git checkout -b feature/wishlist-reviews
+git push -u origin feature/wishlist-reviews
+```
+
+Create a pull request on GitHub from the `feature/wishlist-reviews` branch.
+
+
+
+
+
+
+
 ---
 
 ## Verify
 
-- [ ] `.specs/001-add-wishlist-reviews/checklist.md` exists
-- [ ] `.specs/001-add-wishlist-reviews/tasks.md` exists
-- [ ] Tasks organized in 2 phases (Wishlist, Reviews)
-- [ ] Every task is linked to a GitHub sub-issue
+- [ ] Tasks are decomposed and documented
+- [ ] Sub-issues are created for each phase
+- [ ] PR is created for feature branch
 
 
 ---
 
-## Key Takeaway
+## Productivity Benefit
 
-> Two focused phases plus sub-issue traceability keep implementation work visible, reviewable, and easy to close out.
+> Task decomposition + GitHub sub-issues converts a vague feature into a tracked, assignable work queue in minutes. Every task links back to the spec, so review cycles shrink because reviewers can see intent alongside code.
 
 ---
 

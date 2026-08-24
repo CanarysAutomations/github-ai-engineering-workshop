@@ -63,16 +63,15 @@ After the agent finishes, it provides a concise test report and any evidence not
 
 ## Verify
 
-- [ ] UIAutomationTester was selected in Copilot Chat
-- [ ] The agent followed `.github/skills/ui-automation-testing/SKILL.md`
-- [ ] Pass/fail results were returned for the UI flow
-- [ ] Any defects include clear reproduction notes
+- [ ] UIAutomationTester agent is configured
+- [ ] UI automation tests are executed
+- [ ] Test results are documented
 
 ---
 
-## Key Takeaway
+## Productivity Benefit
 
-> A specialized agent plus a shared skill file turns UI automation into a repeatable, prompt-driven validation step.
+> Writing Playwright tests manually for a full checkout flow takes hours. A custom agent with a shared skill file runs the same validation with a single prompt — and produces a structured pass/fail artifact that doubles as a regression record for every future release.
 
 ---
 

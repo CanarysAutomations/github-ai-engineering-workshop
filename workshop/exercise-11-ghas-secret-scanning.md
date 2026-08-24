@@ -53,16 +53,15 @@ With push protection enabled, any future push containing secrets will be blocked
 
 ## Verify
 
-- [ ] Advanced Security tooling is enabled in chat settings
-- [ ] GHAS secret scanning is enabled for the repository
+- [ ] Advanced Security tooling is enabled
+- [ ] Secret scanning is active
 - [ ] Push protection is enabled
-- [ ] A push containing secrets is blocked
 
 ---
 
-## Key Takeaway
+## Productivity Benefit
 
-> Secret scanning is most useful when the workflow catches the secret before it can be pushed.
+> A leaked secret can cost days of credential rotation, incident reporting, and trust recovery. Push protection stops it at the source — zero developer overhead once enabled, and the Advanced Security plugin gives Copilot Chat instant visibility into any existing exposure.
 
 ---
 

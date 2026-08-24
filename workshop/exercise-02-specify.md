@@ -20,20 +20,16 @@ In Copilot Chat (`Ctrl+Alt+I`), use the GitHub MCP `#issue_read` tool to referen
 /speckit.specify #issue_read <ISSUE-NUMBER>
 
 ```
-
-
 Where `<ISSUE-NUMBER>` is your parent issue number from Exercise 01.
 
 Spec Kit will read the parent issue and generate a detailed specification covering:
-- User Goals & Acceptance Criteria (map from issue)
-- Non-Functional Requirements (in-memory storage, JWT auth, concurrency)
+- User Goals & Acceptance Criteria 
+- Non-Functional Requirements 
 - Architecture & Integration 
-
-
-Output: .specs/001-add-wishlist-reviews/spec.md
 
 > **Tip**: GitHub MCP tool `#issue_read` allows Copilot to read your GitHub issue directly. If GitHub MCP is not configured, you can manually paste the issue body into the prompt instead.
 > **Note**: Make sure GitHub MCP is enabled; refer to [exercise-00-prerequisites.md](exercise-00-prerequisites.md) for setup instructions.
+> **Optional**: Use [Jira Alternative Workflow](jira-alternative-workflow.md) if your team prefers Jira.
 
 
 ---
@@ -56,16 +52,15 @@ git add .specs/001-add-wishlist-reviews/spec.md && git commit -m "spec: wishlist
 
 ## Verify
 
-- [ ] `.specs/001-add-wishlist-reviews/spec.md` exists
-- [ ] Spec maps all parent issue ACs
-- [ ] Includes Non-Functional Requirements for in-memory storage, auth, and concurrency
-- [ ] Defines the required services and DTOs
+- [ ] Specification document is created and committed
+- [ ] All acceptance criteria are captured
+- [ ] Non-functional requirements are defined
 
 ---
 
-## Key Takeaway
+## Productivity Benefit
 
-> GitHub issue → Spec with full traceability. Specification is the single source of truth for the feature.
+> Turning a GitHub issue into a structured spec with Copilot takes minutes, not days. The resulting spec eliminates back-and-forth between developers and stakeholders by capturing ACs, NFRs, and integration points before a single line of code is written.
 
 ---
 

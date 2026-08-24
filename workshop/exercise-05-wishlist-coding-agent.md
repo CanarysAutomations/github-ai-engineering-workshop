@@ -106,7 +106,19 @@ To automatically request Copilot Review on every PR:
 
 ---
 
-## Step 7 — Update VS Code Launch Config After Merge
+## Step 7 — Stacked PR
+
+Copilot coding agent creates a PR for the Wishlist feature. Lets merge the PR with feature/wishlist-reviews branch. 
+
+![Branching Strategy](assets/prbranchchange.png)
+
+Use Stacked PR strategy to merge the PR into main branch. This allows you to merge the PR without losing the feature/wishlist-reviews branch. Refer to [Stacked PRs](https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests) for more details.
+
+![Stacked PR](assets/PRstack.png)
+
+---
+
+## Step 8 — Update VS Code Launch Config After Merge
 
 After merging and pulling locally, prompt the local agent in Copilot Chat:
 
@@ -119,16 +131,15 @@ Then restart **Run & Debug → MyEcomm-Full Stack**.
 
 ## Verify
 
-- [ ] Issue assigned to Copilot
-- [ ] PR created for the implementation
-- [ ] Playwright e2e tests for wishlist feature added
-- [ ] Copilot Review Agent feedback received
+- [ ] Issue assigned to coding agent
+- [ ] Implementation PR is created
+- [ ] Code review feedback is incorporated
 
 ---
 
-## Key Takeaway
+## Productivity Benefit
 
-> Default agent produces clean CRUD code with self-review before human review..
+> A well-specified issue assigned to the Coding Agent produces a complete PR — endpoints, DTOs, tests — while you work on something else. Boilerplate that would take a developer 2–3 hours is ready for review in minutes.
 
 ---
 

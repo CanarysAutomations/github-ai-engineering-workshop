@@ -6,16 +6,9 @@ function fakeDiscount(price: number): number {
   return 10 + (Math.round(price * 7) % 31); // 10-40%
 }
 
-/** Deterministic rating 3.8 - 4.8 */
-function fakeRating(name: string): number {
-  const code = name.charCodeAt(0) + (name.charCodeAt(1) ?? 0);
-  return +(3.8 + (code % 10) / 10).toFixed(1);
-}
-
 export function ProductCard({ product }: { product: Product }) {
   const discount = fakeDiscount(product.price);
   const originalPrice = product.price / (1 - discount / 100);
-  const rating = fakeRating(product.name);
 
   return (
     <Link to={`/products/${product.id}`} className="fk-product-card">
@@ -32,10 +25,6 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
       <div className="fk-product-info">
         <p className="fk-product-name">{product.name}</p>
-        <div className="fk-product-meta">
-          <span className="fk-rating">{rating} ★</span>
-          <span className="fk-rating-count">(1,{Math.floor(100 + (product.price % 900))})</span>
-        </div>
         <div className="fk-product-pricing">
           <span className="fk-price">${product.price.toFixed(2)}</span>
           <span className="fk-original-price">${originalPrice.toFixed(2)}</span>

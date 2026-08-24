@@ -9,11 +9,6 @@ function fakeDiscount(price: number): number {
   return 10 + (Math.round(price * 7) % 31);
 }
 
-function fakeRating(name: string): number {
-  const code = name.charCodeAt(0) + (name.charCodeAt(1) ?? 0);
-  return +(3.8 + (code % 10) / 10).toFixed(1);
-}
-
 export function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
@@ -65,8 +60,6 @@ export function ProductDetailPage() {
 
   const discount = fakeDiscount(product.price);
   const originalPrice = product.price / (1 - discount / 100);
-  const rating = fakeRating(product.name);
-  const reviewCount = `${Math.floor(1000 + (product.price % 9000)).toLocaleString()}`;
 
   return (
     <div className="fk-detail-wrap">
@@ -112,11 +105,6 @@ export function ProductDetailPage() {
         <div className="fk-detail-info">
           <p className="fk-detail-category">{product.category}</p>
           <h1 className="fk-detail-name">{product.name}</h1>
-
-          <div className="fk-detail-rating-row">
-            <span className="fk-detail-rating">{rating} ★</span>
-            <span className="fk-detail-rating-count">{reviewCount} Ratings &amp; Reviews</span>
-          </div>
 
           <div className="fk-detail-price-section">
             <p className="fk-special-price-label">Special Price</p>

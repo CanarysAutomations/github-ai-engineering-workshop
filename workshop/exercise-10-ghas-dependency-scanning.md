@@ -9,6 +9,7 @@
 ## Background
 
 Dependency scanning is useful when the vulnerable package is not part of the live runtime path. Here, the client has a vulnerable package in its manifest and lockfile, update the dependency metadata without changing the UI code.
+
 ---
 
 ## Step 1 — Enable Dependency Scanning
@@ -49,16 +50,15 @@ Review the generated diff, commit the new branch, and confirm the alert is close
 
 ## Verify
 
-- [ ] Dependabot alert is closed or resolved
-- [ ] Client build still succeeds
-- [ ] Dependency manifest and lockfile stay in sync
-- [ ] Fix is committed in a new branch
+- [ ] Dependency scanning is enabled
+- [ ] Vulnerable dependency is resolved
+- [ ] Fix is committed to a new branch
 
 ---
 
-## Key Takeaway
+## Productivity Benefit
 
-> Dependency fixes should stay surgical: change the package metadata, not the working app.
+> Manual dependency audits are time-consuming and error-prone. Dependabot identifies the vulnerable package and proposes the exact version fix automatically — what would take a developer 30–60 minutes of research takes seconds to review and accept.
 
 ---
 

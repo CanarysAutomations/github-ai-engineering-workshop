@@ -8,13 +8,15 @@
 
 ## What You Will Build
 
-In this workshop, you'll use **Spec-Driven Development** with GitHub Copilot to design, specify, and implement two complementary eShop features: **Wishlist** (save products for later) and **Product Reviews** (rate and review purchases). Rather than writing code directly, you'll guide Copilot through structured specification → planning → task breakdown → agent assignment → validation.
+Start with a GitHub Issue. End with two production-ready features, secured, tested, and deployed — built almost entirely by AI agents you directed.
 
-By the end, you'll have:
-- **Constitution** — eShop's microservices principles (Minimal APIs, in-memory storage, JWT auth, testing standards)
-- **Specification** — detailed requirements with user goals and 13 acceptance criteria (Wishlist & Reviews)
-- **Technical Plan** — API contracts, data models, service boundaries, and integration design
-- **Implementation & Validation** — both features coded by agents, CI pipelines validated, security scanning enabled, and merged to main
+You'll ship **Wishlist** (save products, move to cart, instant guest-to-login flow) and **Product Reviews** (purchase-verified ratings, live averages, duplicate prevention) on top of a real microservices eShop. No toy examples. Real endpoints. Real security findings. Real CI gates.
+
+Here's how the platform drives every step:
+
+> **Issue** → **Constitution** → **Spec** → **Plan** → **Tasks** → **Coding Agent** → **Local Agent** → **PR Review Agent** → **Code Quality** → **GHAS** → **Coverage CI** → **UI Automation** → **Terraform on Azure**
+
+Each arrow is a different GitHub platform capability. Together they form a **fully governed, AI-accelerated delivery pipeline** — and the same pattern works on any language or stack.
 
 
 
@@ -24,9 +26,6 @@ By the end, you'll have:
 
 - **[VS Code](https://code.visualstudio.com)**
 - **[GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)**
-- **[.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)**
-- **[Node.js 18+](https://nodejs.org)**
-- **npm 8+** (Bundled with Node.js)
 - **[Git CLI](https://git-scm.com)**
 - **[UV](https://astral.sh/uv)**
 - **[Spec Kit](https://github.com/github/spec-kit)**
@@ -35,6 +34,11 @@ By the end, you'll have:
 - **Playwright MCP Server** Enabled
 - **GitHub Advanced Security** Enabled 
 - **GitHub Code Quality** Enabled
+
+**Application Requirements:**
+- **[.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)**
+- **[Node.js 18+](https://nodejs.org)**
+- **npm 8+** (Bundled with Node.js)
 
     
 

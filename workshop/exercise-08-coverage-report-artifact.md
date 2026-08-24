@@ -123,7 +123,6 @@ Location: `.github/workflows/copilot-cli-coverage-fixer.yml`
 
 **Via GitHub UI:**
 - Go to **Actions** → **Copilot CLI - Fix Coverage Gaps**
-- Click **"Run workflow"**
 - Set mode and click **"Run workflow"**
 
 **GitHub CLI**:
@@ -141,16 +140,21 @@ gh workflow run copilot-cli-coverage-fixer.yml -f fix_mode=commit-fixes
 
 ## Verify
 
-- [ ] Code coverage configuration saved
-- [ ] Build failure diagnosed and issue created
-- [ ] Coding agent created PR with fixes
-- [ ] Coverage report artifact downloaded and extracted
+- [ ] Code coverage is configured
+- [ ] Build issues are diagnosed and fixed
+- [ ] Coverage report artifact is available
 
 ---
 
 ## Key Takeaway
 
 > Code coverage artifacts provide a detailed view of test coverage, helping teams identify untested code and maintain high-quality standards.
+
+---
+
+## Productivity Benefit
+
+> An automated 80% coverage gate blocks regressions before they merge — no manual test audit needed. When the gate fails, delegating the fix to the Coding Agent means coverage gaps get closed without pulling a developer off their current task.
 
 ---
 
