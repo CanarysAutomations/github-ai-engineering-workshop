@@ -1,6 +1,6 @@
 # GitHub Copilot Workshop — Wishlist + Reviews Feature
 
-> **Audience**: Intermediate .NET developers with basic GitHub and microservices knowledge <br>
+> **Audience**: Intermediate developers with basic GitHub and github copilot knowledge <br>
 > **Total Duration**: ~3 Hours <br>
 > **Pre-requisites**: VS Code with GitHub Copilot Chat extension, .NET 8 SDK, Git CLI, GitHub Copilot access, Spec Kit CLI, GitHub MCP Server
 
