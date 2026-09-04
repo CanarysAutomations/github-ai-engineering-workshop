@@ -40,6 +40,9 @@ Each arrow is a different GitHub platform capability. Together they form a **ful
 - **[Node.js 18+](https://nodejs.org)**
 - **npm 8+** (Bundled with Node.js)
 
+**Specific domains required for Copilot**
+- [Copilot Allowed List](https://docs.github.com/en/copilot/reference/copilot-allowlist-reference#specific-required-domains)
+
     
 
 ---
